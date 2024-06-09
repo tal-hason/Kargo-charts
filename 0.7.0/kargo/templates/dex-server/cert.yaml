@@ -7,7 +7,6 @@ metadata:
 spec:
   dnsNames:
   - kargo-dex-server.{{ .Release.Namespace }}.svc
-  - kargo-dex-server
   issuerRef:
     kind: Issuer
     name: kargo-selfsigned-cert-issuer
