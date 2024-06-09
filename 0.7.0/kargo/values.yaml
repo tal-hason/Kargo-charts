@@ -140,7 +140,7 @@ api:
 
   ingress:
     ## @param api.ingress.enabled Whether to enable ingress. By default, this is disabled. Enabling ingress is advanced usage.
-    enabled: true
+    enabled: false
     ## @param api.ingress.annotations Annotations specified by your ingress controller to customize the behavior of the ingress resource.
     annotations:
       route.openshift.io/termination: "passthrough"
