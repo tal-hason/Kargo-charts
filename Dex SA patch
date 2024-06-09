@@ -1,0 +1,1 @@
+oc patch serviceaccount system:serviceaccount:kargo:kargo-dex-server --type='json' -p='[{"op": "add", "path": "/metadata/annotations/serviceaccounts.openshift.io~1oauth-redirecturi.dex", "value":"https://kargo-api-kargo.apps.apps-crc.testing/dex/callback"}]'
