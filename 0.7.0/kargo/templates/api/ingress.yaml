@@ -28,9 +28,9 @@ spec:
             name: kargo-api
             port:
               {{- if .Values.api.tls.enabled }}
-              number: 443
+              number: 8083
               {{- else }}
-              number: 80
+              number: 8080
               {{- end }}
   {{- if .Values.api.ingress.tls.enabled }}
   tls:
