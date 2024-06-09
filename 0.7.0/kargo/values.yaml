@@ -273,7 +273,7 @@ api:
       - config:
           clientID: system:serviceaccount:kargo:kargo-dex-server
           clientSecret: $oidc.dex.clientSecret
-          groups: [cluster-admin]
+          groups: [cluster-admins]
           insecureCA: true
           issuer: https://kubernetes.default.svc
           redirectURI: https://kargo-api-kargo.apps.apps-crc.testing/dex/callback
