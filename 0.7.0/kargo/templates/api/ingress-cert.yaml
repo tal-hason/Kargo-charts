@@ -11,6 +11,7 @@ spec:
   dnsNames:
   - {{ quote .Values.api.host }}
   - kargo-api.{{ .Release.Namespace }}.svc
+  - kargo-api-kargo.apps.apps-crc.testing
   issuerRef:
     kind: Issuer
     name: kargo-selfsigned-cert-issuer
