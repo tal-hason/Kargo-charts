@@ -137,6 +137,7 @@ api:
   ## @param api.enablePermissiveCORSPolicy Whether to enable a permissive CORS (Cross Origin Resource Sharing) policy. This is sometimes advantageous during local development, but otherwise, should generally be left disabled.
   enablePermissiveCORSPolicy: false
 
+
   ingress:
     ## @param api.ingress.enabled Whether to enable ingress. By default, this is disabled. Enabling ingress is advanced usage.
     enabled: true
