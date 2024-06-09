@@ -19,7 +19,7 @@ spec:
     name: kargo-api
     weight: 100
   port:
-    targetPort: 8080
+    targetPort: 443
   tls:
     termination: passthrough
     insecureEdgeTerminationPolicy: None
