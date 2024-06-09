@@ -276,7 +276,7 @@ api:
           groups: []
           insecureCA: true
           issuer: https://kubernetes.default.svc
-          redirectURI: https://kargo-api/dex/callback
+          redirectURI: https://kargo-api-kargo.apps.apps-crc.testing/dex/callback
         id: openshift
         name: OpenShift
         type: openshift
