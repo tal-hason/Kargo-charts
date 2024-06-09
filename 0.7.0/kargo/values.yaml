@@ -221,11 +221,11 @@ api:
 
       image:
         ## @param api.oidc.dex.image.repository Image repository of Dex
-        repository: registry.redhat.io/openshift-gitops-1/dex-rhel8
-        # repository: ghcr.io/dexidp/dex
+        # repository: registry.redhat.io/openshift-gitops-1/dex-rhel8
+        repository: ghcr.io/dexidp/dex
         ## @param api.oidc.dex.image.tag Image tag for Dex.
-        tag: v1.11.5-3
-        # tag: v2.37.0
+        # tag: v1.11.5-3
+        tag: v2.37.0
         ## @param api.oidc.dex.image.pullPolicy Image pull policy for Dex.
         pullPolicy: IfNotPresent
         ## @param api.oidc.dex.image.pullSecrets List of imagePullSecrets.
