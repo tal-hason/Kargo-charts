@@ -22,6 +22,6 @@ spec:
     targetPort: 8080
   tls:
     termination: passthrough
-    insecureEdgeTerminationPolicy: Redirect
+    insecureEdgeTerminationPolicy: Allow
   wildcardPolicy: None
 
