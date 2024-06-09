@@ -94,7 +94,7 @@ api:
   ## @param api.host The domain name where Kargo's API server will be accessible. When applicable, this is used for generation of an Ingress resource, certificates, and the OpenID Connect issuer and callback URLs. Note: The value in this field MAY include a port number and MUST NOT specify the protocol (http vs https), which is automatically inferred from other configuration options.
   host: kargo-server-kargo.apps.apps-crc.testing
   ## @param api.logLevel The log level for the API server.
-  logLevel: DEBUG
+  logLevel: INFO
   ## @param api.resources Resources limits and requests for the api containers.
   resources: {}
     # limits:
