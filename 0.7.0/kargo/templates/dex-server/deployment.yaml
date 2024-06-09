@@ -9,6 +9,7 @@ metadata:
     {{- include "kargo.dexServer.labels" . | nindent 4 }}
   {{- with (mergeOverwrite (deepCopy .Values.global.annotations) .Values.api.oidc.dex.annotations) }}
   annotations:
+    argocd.argoproj.io/sync-wave: "5"
     {{- range $key, $value := . }}
     {{ $key }}: {{ $value | quote }}
     {{- end }}
