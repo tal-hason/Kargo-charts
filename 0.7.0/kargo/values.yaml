@@ -199,7 +199,7 @@ api:
       ## @param api.oidc.admins.emails Subjects having any of these values in their email claim will automatically be Kargo admins.
       emails: []
       ## @param api.oidc.admins.groups Subjects having any of these values in their groups claim will automatically be Kargo admins.
-      groups: []
+      groups: [cluster-admins]
 
     viewers:
       ## @param api.oidc.viewers.subs Subjects having any of these values in their sub claim will automatically receive read-only access to all Kargo resources.
