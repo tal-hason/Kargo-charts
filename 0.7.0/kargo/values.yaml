@@ -217,11 +217,14 @@ api:
       ## @param api.oidc.dex.enabled Whether to enable Dex as the identity provider. When set to true, the Kargo installation will include a Dex server and the Kargo API server will be configured to make the /dex endpoint a reverse proxy for the Dex server.
       enabled: true
 
+# registry.redhat.io/openshift-gitops-1/dex-rhel8@sha256:1be358ae4610ca430efd2a4469d536e4243332f814ee5a909bad03c2889eaaa4
+
       image:
         ## @param api.oidc.dex.image.repository Image repository of Dex
-        repository: ghcr.io/dexidp/dex
+        repository: registry.redhat.io/openshift-gitops-1/dex-rhel8
         ## @param api.oidc.dex.image.tag Image tag for Dex.
-        tag: v2.37.0
+        tag: v1.11.5-3
+        # tag: v2.37.0
         ## @param api.oidc.dex.image.pullPolicy Image pull policy for Dex.
         pullPolicy: IfNotPresent
         ## @param api.oidc.dex.image.pullSecrets List of imagePullSecrets.
