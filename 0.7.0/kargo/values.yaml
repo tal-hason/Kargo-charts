@@ -233,12 +233,12 @@ api:
         # - name: regcred
 
       ## @param api.oidc.dex.env Environment variables to add to Dex server pods. This is convenient for cases where api.oidc.dex.connectors needs to reference environment variables from a Secret that is managed "out of band" with a secret management solution such as Sealed Secrets.
-      env: []
-      # - name: CLIENT_SECRET
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: github-dex
-      #       key: dex.github.clientSecret
+      env: 
+      - name: CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: kargo-dex-server-token-m98ck
+            key: token
       ## @param api.oidc.dex.envFrom Environment variables to add to Dex server pods from ConfigMaps or Secrets. This is especially convenient for cases where api.oidc.dex.connectors needs to reference environment variables from a Secret that is managed "out of band" with a secret management solution such as Sealed Secrets.
       envFrom: []
       #  - configMapRef:
@@ -247,11 +247,11 @@ api:
       #      name: secret-name
 
       ## @param api.oidc.dex.volumes Add additional volumes to Dex pods. This is convenient for cases where api.oidc.dex.connectors needs to reference mounted data from a Secret that is managed "out of band" with a secret management solution such as Sealed Secrets.
-      volumes: []
-      # - name: google-json
-      #   secret:
-      #     defaultMode: 420
-      #     secretName: kargo-google-groups-json
+      volumes:
+        # - name: oidc.dex.clientSecret
+        #   secret:
+        #     defaultMode: 420
+        #     secretName: kargo-dex-server-token-m98ck
 
       ## @param api.oidc.dex.volumeMounts Add additional volume mounts to Dex pods. This is convenient for cases where api.oidc.dex.connectors needs to reference mounted data from a Secret that is managed "out of band" with a secret management solution such as Sealed Secrets.
       volumeMounts:
@@ -272,7 +272,7 @@ api:
       connectors: 
       - config:
           clientID: system:serviceaccount:kargo:kargo-dex-server
-          clientSecret: $oidc.dex.clientSecret
+          clientSecret: $CLIENT_SECRET
           groups: [cluster-admins]
           insecureCA: true
           issuer: https://kubernetes.default.svc
